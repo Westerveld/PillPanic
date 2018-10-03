@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+    public Inventory inventory;
 
     public int playerSpeed = 2;
 
