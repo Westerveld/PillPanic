@@ -9,46 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1884684695414392}
+  m_RootGameObject: {fileID: 1876689287502178}
   m_IsPrefabParent: 1
---- !u!1 &1884684695414392
+--- !u!1 &1876689287502178
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4404448138237258}
-  - component: {fileID: 33229237897999054}
-  - component: {fileID: 23915318339360918}
-  - component: {fileID: 65583193197461948}
+  - component: {fileID: 4775580363431586}
+  - component: {fileID: 33236626861877772}
+  - component: {fileID: 23026997714436776}
+  - component: {fileID: 65895352852680886}
+  - component: {fileID: 114106951827644578}
   m_Layer: 0
-  m_Name: Shelf
+  m_Name: PillTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4404448138237258
+--- !u!4 &4775580363431586
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1884684695414392}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 2.5, z: -10}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_GameObject: {fileID: 1876689287502178}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.47, y: 1.28, z: 7.95}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!23 &23915318339360918
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23026997714436776
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1884684695414392}
-  m_Enabled: 1
+  m_GameObject: {fileID: 1876689287502178}
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -57,7 +58,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 908ff13449ecfb846bad6b2324445c56, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -77,22 +78,41 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33229237897999054
+--- !u!33 &33236626861877772
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1884684695414392}
+  m_GameObject: {fileID: 1876689287502178}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65583193197461948
+--- !u!65 &65895352852680886
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1884684695414392}
+  m_GameObject: {fileID: 1876689287502178}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 8.38, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114106951827644578
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1876689287502178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 609caa8f09f34de4595b70634c64d94d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myPill: 0
+  pills:
+  - {fileID: 1613332431220810, guid: 00f5ae46269a41b45a9c50980f5fd8fd, type: 2}
+  - {fileID: 1665269933809482, guid: 04b6f3d466f105e4abf35a893d0c3d93, type: 2}
+  - {fileID: 1065313063192186, guid: c6299b812dcc20a40b3750f67bd1c932, type: 2}
+  - {fileID: 1667844153067320, guid: e0b63ec84d01e0847a4ee262bbe6b721, type: 2}
+  - {fileID: 1003521057549024, guid: 83fac8de9d4843041bfdb8d44963fc81, type: 2}
+  - {fileID: 1484270202331536, guid: d5494f21ef38c2c43921b7cb8c964d30, type: 2}

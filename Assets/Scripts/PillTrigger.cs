@@ -32,6 +32,7 @@ public class PillTrigger : MonoBehaviour
 			if (mController.buttonPressed)
 			{
 				mController.inventory.AddToInventory(myPill);
+                Instantiate(pills[Random.Range(0, pills.Length)], transform.position + new Vector3(0.0f, 5.0f, 0.0f), Quaternion.identity);
 			}
 		}
 	}
