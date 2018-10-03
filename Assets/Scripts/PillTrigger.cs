@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -8,6 +9,8 @@ public class PillTrigger : MonoBehaviour
 {
 
 	public PillType myPill;
+
+	public GameObject[] pills;
 	// Use this for initialization
 	void Start () 
 	{
@@ -21,14 +24,14 @@ public class PillTrigger : MonoBehaviour
 
 	}
 
-	void OnCollisionStay(Collision col)
+	void OnTriggerStay(Collider col)
 	{
-		if (col.gameObject.tag == "Player")
+		if (col.gameObject.CompareTag( "Player"))
 		{
 			PlayerController mController = col.gameObject.GetComponent<PlayerController>();
-			if (Input.GetButtonDown("Fire" + mController.playerSuffix))
+			if (mController.buttonPressed)
 			{
-				
+				mController.inventory.AddToInventory(myPill);
 			}
 		}
 	}
